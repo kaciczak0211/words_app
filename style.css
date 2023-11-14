@@ -7,6 +7,10 @@
     display: none;
 }
 
+legend{
+    padding: 1rem;
+    font-size: 26px;
+}
 
 #pos{
     font-weight: 200;
@@ -19,4 +23,20 @@
 
 button{
     cursor: pointer;
+}
+
+.content{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dictionary{
+    text-align: center;
+}
+
+#result{
+    margin-left: 20vh;
+    margin-right: 20vh;
 }
