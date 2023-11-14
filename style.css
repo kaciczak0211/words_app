@@ -1,6 +1,22 @@
+
+
 #pl-word{
     color: white;
 }
 #main-con{
     display: none;
+}
+
+
+#pos{
+    font-weight: 200;
+    font-style: italic;
+}
+
+#word-example{
+    font-style: italic;
+}
+
+button{
+    cursor: pointer;
 }
