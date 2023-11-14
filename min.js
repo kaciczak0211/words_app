@@ -17,8 +17,10 @@ btn.addEventListener("click", function(){
         <h3 id="title">${wordValue}</h3>
         <h3 id="pos">${data[0].meanings[0].partOfSpeech}</h3>
         <button onclick="playSound()"><i class="fa-solid fa-volume-high" style="color: #000000;"></i></button>
-        <h3 id="def">${data[0].meanings[0].definitions[0].definition}</h3>
-        <h3 id="word-example">${data[0].meanings[0].definitions[0].example || ""}</h3>
+        <h3 class="def">${data[0].meanings[0].definitions[0].definition}</h3>
+        <h3 class="def">${data[0].meanings[0].definitions[1].definition}</h3>
+        <h3 class="def">${data[0].meanings[0].definitions[2].definition}</h3>
+        <h3 class="word-example">${data[0].meanings[0].definitions[0].example || ""}</h3>
         `
         let audioMp3 = data[0].phonetics[0].audio || data[0].phonetics[1].audio || data[0].phonetics[2].audio || data[0].phonetics[3].audio
         console.log(sound);
@@ -29,10 +31,11 @@ btn.addEventListener("click", function(){
     .catch(() =>{
         result.innerHTML = `<h3>Couldn't find the word</h3>`
     })
+
+    wordInput.value = "";
 })
 
 function playSound(){
     sound.play();
-    console.log("play")
 }
 
